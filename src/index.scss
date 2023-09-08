@@ -124,11 +124,17 @@ header {
   background: #ffffff;
   box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
   padding: 30px;
+  display: flex;
+  flex-direction: column;
 
   h2 {
     margin: 0;
   }
-
+  .items {
+    flex: 1;
+    overflow: auto;
+    margin-bottom: 40px;
+  }
   .removeBtn {
     opacity: 0.5;
     cursor: pointer;
@@ -137,6 +143,60 @@ header {
     &:hover {
       opacity: 1;
     }
+  }
+}
+
+.cartTotalBlock {
+  ul {
+    margin-bottom: 40px !important;
+    div {
+      flex: 1;
+      height: 1px;
+      border-bottom: 1px dashed #5c5c5c;
+      position: relative;
+      top: -4px;
+      margin: 0 10px;
+    }
+    li {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 20px;
+    }
+  }
+
+  .greenButton {
+    position: relative;
+    &:hover {
+      img {
+        transform: translateX(5px);
+      }
+    }
+    img {
+      position: absolute;
+      right: 0;
+      right: 40px;
+      top: 20px;
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+}
+
+.greenButton {
+  width: 100%;
+  height: 55px;
+  border-radius: 18px;
+  background-color: #9dd458;
+  border: 0;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease-in-out;
+  &:hover {
+    background: #bde192;
+  }
+  &:active {
+    background: #80b046;
   }
 }
 
