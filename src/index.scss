@@ -66,6 +66,17 @@ header {
   border-radius: 10px;
   padding: 0 15px;
   margin-right: 30px;
+  position: relative;
+
+  .clear{
+    position: absolute;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    top: 13px;
+    right: 10px;
+    cursor: pointer;
+  }
 
   input {
     border: 0;
