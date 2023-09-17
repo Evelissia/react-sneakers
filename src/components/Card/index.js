@@ -6,16 +6,23 @@ console.log(styles);
 function Card({onClickFavorite, title, imageUrl, price, onPlus}) {
 
   const [isAdded, setIsAdded] = React.useState(false)
+  const [isFavorite, setIsFavorite] = React.useState(false)
+
+
 
   const onClickPlus = () => {
     onPlus({title, imageUrl, price})
     setIsAdded(!isAdded)
   }
 
+  onClickFavorite = () => {
+    setIsFavorite(!isFavorite)
+  }
+
   return (
     <div className={styles.card}>
       <div className={styles.favorite} onClick={onClickFavorite}>
-        <img src="/img/heart-liked.svg" alt="liked" />
+        <img src={isFavorite ? '/img/heart-liked.svg' : '/img/heart-unliked.svg'} alt="liked" />
       </div>
       <img width={133} height={112} src={imageUrl} alt="none" />
       <h5>{title}</h5>
