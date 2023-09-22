@@ -35,6 +35,10 @@ function App() {
     setsearchValue(event.target.value);
   };
 
+  const onAddToFavorite = () => {
+    
+  }
+
   return (
     <div className="wrapper clear">
       {cartOpened && (
